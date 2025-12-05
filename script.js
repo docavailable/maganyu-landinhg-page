@@ -74,11 +74,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Android download - replace with your actual APK URL
+    // Android download
     androidDownload.addEventListener('click', (e) => {
         e.preventDefault();
-        // Replace this URL with your actual Android APK download link
-        window.location.href = 'https://your-app-download-url.com/maganyu.apk';
+        // Download from GitHub Releases
+        window.location.href = 'https://github.com/docavailable/maganyu-landinhg-page/releases/download/1.2.0/maganyu.apk';
+        // Close modal
         closeModal();
     });
 
