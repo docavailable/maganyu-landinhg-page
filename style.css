@@ -627,7 +627,8 @@ p {
 /* Responsive */
 @media (max-width: 768px) {
     h1 {
-        font-size: 2.8rem;
+        font-size: 2.2rem;
+        line-height: 1.2;
     }
 
     /* Remove background from hero section on mobile */
@@ -847,5 +848,195 @@ body.menu-open {
     .mobile-toggle.active i::before {
         content: "\f00d";
         /* FontAwesome X icon */
+    }
+}
+
+/* Download Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-container {
+    background: #ffffff;
+    border-radius: 24px;
+    width: 90%;
+    max-width: 500px;
+    padding: 3rem;
+    position: relative;
+    transform: perspective(1000px) rotateX(-15deg) scale(0.8);
+    opacity: 0;
+    filter: blur(10px);
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+        opacity 0.4s ease,
+        filter 0.4s ease;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.modal-overlay.active .modal-container {
+    transform: perspective(1000px) rotateX(0deg) scale(1);
+    opacity: 1;
+    filter: blur(0px);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: #f1f5f9;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 1.2rem;
+    color: var(--text-muted);
+}
+
+.modal-close:hover {
+    background: #e2e8f0;
+    color: var(--text-color);
+    transform: rotate(90deg);
+}
+
+.modal-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.modal-header h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #0f172a;
+}
+
+.modal-header p {
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.download-option {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 16px;
+    transition: var(--transition);
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+.download-option:not(.disabled):hover {
+    border-color: var(--primary-color);
+    background: rgba(37, 99, 235, 0.02);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(37, 99, 235, 0.1);
+}
+
+.download-option.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: #f8fafc;
+}
+
+.download-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(37, 99, 235, 0.05));
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+.download-option.disabled .download-icon {
+    background: #e2e8f0;
+    color: var(--text-muted);
+}
+
+.download-info {
+    flex: 1;
+}
+
+.download-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.25rem;
+    color: #0f172a;
+}
+
+.download-info p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.download-option>.fa-arrow-right {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.download-option:not(.disabled):hover>.fa-arrow-right {
+    transform: translateX(5px);
+}
+
+.coming-soon-badge {
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .modal-container {
+        padding: 2rem;
+        width: 95%;
+    }
+
+    .modal-header h2 {
+        font-size: 1.6rem;
+    }
+
+    .download-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.6rem;
+    }
+
+    .download-info h3 {
+        font-size: 1.1rem;
     }
 }

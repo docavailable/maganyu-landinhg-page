@@ -46,6 +46,42 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Download Modal
+    const downloadModal = document.getElementById('downloadModal');
+    const downloadButtons = document.querySelectorAll('[data-modal="download"]');
+    const modalClose = document.querySelector('.modal-close');
+    const androidDownload = document.getElementById('androidDownload');
+
+    // Open modal
+    downloadButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            downloadModal.classList.add('active');
+            document.body.classList.add('menu-open');
+        });
+    });
+
+    // Close modal
+    const closeModal = () => {
+        downloadModal.classList.remove('active');
+        document.body.classList.remove('menu-open');
+    };
+
+    modalClose.addEventListener('click', closeModal);
+    downloadModal.addEventListener('click', (e) => {
+        if (e.target === downloadModal) {
+            closeModal();
+        }
+    });
+
+    // Android download - replace with your actual APK URL
+    androidDownload.addEventListener('click', (e) => {
+        e.preventDefault();
+        // Replace this URL with your actual Android APK download link
+        window.location.href = 'https://your-app-download-url.com/maganyu.apk';
+        closeModal();
+    });
+
     // Premium Mobile Side Menu
     const mobileToggle = document.querySelector('.mobile-toggle');
     const navLinks = document.querySelector('.nav-links');
