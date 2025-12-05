@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    const animatedElements = document.querySelectorAll('.fade-in-up');
+    const animatedElements = document.querySelectorAll('.fade-in-up, .screenshot-item');
     animatedElements.forEach(el => observer.observe(el));
 
     // Smooth Scroll for Anchor Links
