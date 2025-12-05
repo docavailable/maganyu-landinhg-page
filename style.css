@@ -727,9 +727,15 @@ p {
     }
 
     .phone-mockup {
-        width: 260px;
-        height: 540px;
+        width: 90%;
+        max-width: 260px;
+        height: auto;
         transform: perspective(1000px) rotateY(-8deg) rotateX(3deg);
+    }
+
+    .phone-mockup img {
+        width: 100%;
+        height: auto;
     }
 
     .feature-grid {
