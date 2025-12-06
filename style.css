@@ -573,33 +573,52 @@ p {
     color: var(--primary-color);
 }
 
-/* Screenshots Section */
-.screenshots-section {
-    padding: 8rem 0;
-    background: #f8fafc;
+/* Screenshots Slideshow */
+.slideshow-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 4rem auto 0;
+    padding: 0 4rem;
 }
 
-.screenshots-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 6rem;
-    margin-top: 4rem;
+.slides-wrapper {
+    overflow: hidden;
+    position: relative;
 }
 
-.screenshot-item {
-    display: grid;
+.screenshot-slide {
+    display: none;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
+    animation: fadeIn 0.6s ease;
+}
+
+.screenshot-slide.active {
+    display: grid;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .screenshot-phone {
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .screenshot-phone img {
     width: 100%;
-    max-width: 300px;
+    max-width: 350px;
     height: auto;
     border-radius: 24px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
@@ -621,6 +640,71 @@ p {
     font-size: 1.1rem;
     color: var(--text-muted);
     line-height: 1.7;
+}
+
+/* Navigation Arrows */
+.slide-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ffffff;
+    border: 2px solid #e2e8f0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+    z-index: 10;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.slide-nav:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.slide-nav.prev {
+    left: 0;
+}
+
+.slide-nav.next {
+    right: 0;
+}
+
+/* Slide Indicators */
+.slide-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 3rem;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #e2e8f0;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    padding: 0;
+}
+
+.indicator:hover {
+    background: #cbd5e1;
+    transform: scale(1.2);
+}
+
+.indicator.active {
+    background: var(--primary-color);
+    width: 32px;
+    border-radius: 6px;
 }
 
 /* CTA Section */
@@ -862,102 +946,19 @@ p {
         font-size: 2rem;
     }
 
-    /* Screenshots Section Mobile */
-    .screenshots-section {
-        padding: 4rem 0;
+    /* Slideshow Mobile */
+    .slideshow-container {
+        padding: 0 3rem;
     }
 
-    .screenshots-grid {
-        gap: 3rem;
-    }
-
-    .screenshot-item {
+    .screenshot-slide {
         grid-template-columns: 1fr;
         gap: 2rem;
         text-align: center;
     }
 
-    /* Directional slide-in animations for mobile */
-    .screenshot-item:nth-child(1) .screenshot-phone {
-        transform: translateX(-100px);
-        opacity: 0;
-        transition: transform 0.8s ease, opacity 0.8s ease;
-    }
-
-    .screenshot-item:nth-child(1).visible .screenshot-phone {
-        transform: translateX(0);
-        opacity: 1;
-    }
-
-    .screenshot-item:nth-child(2) .screenshot-phone {
-        transform: translateX(100px);
-        opacity: 0;
-        transition: transform 0.8s ease, opacity 0.8s ease;
-    }
-
-    .screenshot-item:nth-child(2).visible .screenshot-phone {
-        transform: translateX(0);
-        opacity: 1;
-    }
-
-    .screenshot-item:nth-child(3) .screenshot-phone {
-        transform: translateY(50px);
-        opacity: 0;
-        transition: transform 0.8s ease, opacity 0.8s ease;
-    }
-
-    .screenshot-item:nth-child(3).visible .screenshot-phone {
-        transform: translateY(0);
-        opacity: 1;
-    }
-
-    .screenshot-item:nth-child(4) .screenshot-phone {
-        transform: translateX(-100px);
-        opacity: 0;
-        transition: transform 0.8s ease, opacity 0.8s ease;
-    }
-
-    .screenshot-item:nth-child(4).visible .screenshot-phone {
-        transform: translateX(0);
-        opacity: 1;
-    }
-
-    .screenshot-item:nth-child(5) .screenshot-phone {
-        transform: translateX(100px);
-        opacity: 0;
-        transition: transform 0.8s ease, opacity 0.8s ease;
-    }
-
-    .screenshot-item:nth-child(5).visible .screenshot-phone {
-        transform: translateX(0);
-        opacity: 1;
-    }
-
-    .screenshot-item:nth-child(6) .screenshot-phone {
-        transform: translateY(50px);
-        opacity: 0;
-        transition: transform 0.8s ease, opacity 0.8s ease;
-    }
-
-    .screenshot-item:nth-child(6).visible .screenshot-phone {
-        transform: translateY(0);
-        opacity: 1;
-    }
-
-    .screenshot-item:nth-child(7) .screenshot-phone {
-        transform: translateX(-100px);
-        opacity: 0;
-        transition: transform 0.8s ease, opacity 0.8s ease;
-    }
-
-    .screenshot-item:nth-child(7).visible .screenshot-phone {
-        transform: translateX(0);
-        opacity: 1;
-    }
-
     .screenshot-phone img {
-        max-width: 250px;
-        margin: 0 auto;
+        max-width: 280px;
     }
 
     .screenshot-info h3 {
@@ -966,6 +967,16 @@ p {
 
     .screenshot-info p {
         font-size: 1rem;
+    }
+
+    .slide-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .slide-indicators {
+        margin-top: 2rem;
     }
 }
 
@@ -1352,4 +1363,41 @@ body.menu-open {
 
 .modal-thank-you .btn {
     margin-top: 1rem;
+}
+
+/* Hero Landing Image */
+.hero-landing-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* Slideshow Phone Mockup Variant */
+.phone-mockup.slideshow-variant {
+    transform: none;
+    /* Remove 3D tilt */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    /* Simpler shadow */
+    width: 280px;
+    /* Slightly smaller to fit better */
+    height: 580px;
+    margin: 0 auto;
+}
+
+.phone-mockup.slideshow-variant:hover {
+    transform: translateY(-10px);
+    /* Simple hover effect */
+}
+
+/* Update screenshot-phone to remove old img styles that might conflict */
+.screenshot-phone img.app-screenshot {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensure it fills the screen */
+    border-radius: 0;
+    /* Let the screen container handle radius */
+    box-shadow: none;
+    /* Remove old shadow */
 }

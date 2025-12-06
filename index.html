@@ -65,12 +65,7 @@
                 </div>
             </div>
             <div class="hero-visual fade-in-up delay-200">
-                <div class="phone-mockup floating">
-                    <div class="screen">
-                        <img src="app_screenshot.jpg" alt="App Screenshot" class="app-screenshot">
-                    </div>
-                </div>
-                <div class="glow-circle"></div>
+                <img src="landing.png" alt="App Screenshot" class="hero-landing-image">
             </div>
         </div>
     </header>
@@ -123,85 +118,134 @@
                 <p>Discover how easy it is to connect, communicate, and get things done</p>
             </div>
 
-            <div class="screenshots-grid">
-                <!-- Screenshot 1 -->
-                <div class="screenshot-item fade-in-up">
-                    <div class="screenshot-phone">
-                        <img src="app_screenshot.jpg" alt="Browse Services">
+            <div class="slideshow-container">
+                <!-- Navigation Arrows -->
+                <button class="slide-nav prev" aria-label="Previous slide">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button class="slide-nav next" aria-label="Next slide">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+                <!-- Slides -->
+                <div class="slides-wrapper">
+                    <!-- Slide 1: Browse Services -->
+                    <div class="screenshot-slide active">
+                        <div class="screenshot-phone">
+                            <div class="phone-mockup slideshow-variant">
+                                <div class="screen">
+                                    <img src="browse-services.jpg" alt="Browse Services" class="app-screenshot">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="screenshot-info">
+                            <h3>Browse Services</h3>
+                            <p>Find the perfect handyman for your needs with our intuitive search and filtering system
+                            </p>
+                        </div>
                     </div>
-                    <div class="screenshot-info">
-                        <h3>Browse Services</h3>
-                        <p>Find the perfect handyman for your needs with our intuitive search and filtering system</p>
+
+                    <!-- Slide 2: Find Handymen -->
+                    <div class="screenshot-slide">
+                        <div class="screenshot-phone">
+                            <div class="phone-mockup slideshow-variant">
+                                <div class="screen">
+                                    <img src="find-handymen.jpg" alt="Find Handymen" class="app-screenshot">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="screenshot-info">
+                            <h3>Find Handymen</h3>
+                            <p>Discover skilled professionals for any task with ease and confidence</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3: Create Jobs -->
+                    <div class="screenshot-slide">
+                        <div class="screenshot-phone">
+                            <div class="phone-mockup slideshow-variant">
+                                <div class="screen">
+                                    <img src="create-jobs.jpg" alt="Create Jobs" class="app-screenshot">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="screenshot-info">
+                            <h3>Post Jobs</h3>
+                            <p>Describe your task, set your budget, and let the professionals come to you</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4: Make & Receive Offers -->
+                    <div class="screenshot-slide">
+                        <div class="screenshot-phone">
+                            <div class="phone-mockup slideshow-variant">
+                                <div class="screen">
+                                    <img src="make-offers.jpg" alt="Make Offers" class="app-screenshot">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="screenshot-info">
+                            <h3>Make & Receive Offers</h3>
+                            <p>Negotiate terms and pricing directly. Accept the best offer that fits your needs</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5: Track Progress -->
+                    <div class="screenshot-slide">
+                        <div class="screenshot-phone">
+                            <div class="phone-mockup slideshow-variant">
+                                <div class="screen">
+                                    <img src="track-progress.jpg" alt="Track Progress" class="app-screenshot">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="screenshot-info">
+                            <h3>Track Progress</h3>
+                            <p>Monitor your service requests, appointments, and job completion in real-time</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 6: Secure Payments -->
+                    <div class="screenshot-slide">
+                        <div class="screenshot-phone">
+                            <div class="phone-mockup slideshow-variant">
+                                <div class="screen">
+                                    <img src="secure-payments.jpg" alt="Secure Payments" class="app-screenshot">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="screenshot-info">
+                            <h3>Secure Payments</h3>
+                            <p>Pay safely with our integrated escrow system. Funds are released only when you're
+                                satisfied</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 7: Update Profile -->
+                    <div class="screenshot-slide">
+                        <div class="screenshot-phone">
+                            <div class="phone-mockup slideshow-variant">
+                                <div class="screen">
+                                    <img src="update-profile.jpg" alt="Update Profile" class="app-screenshot">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="screenshot-info">
+                            <h3>Your Profile</h3>
+                            <p>Manage your personal information, skills, and portfolio to attract more business</p>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Screenshot 2 -->
-                <div class="screenshot-item fade-in-up delay-100">
-                    <div class="screenshot-info">
-                        <h3>Real-Time Chat</h3>
-                        <p>Communicate directly with handymen, share photos, and discuss project details instantly</p>
-                    </div>
-                    <div class="screenshot-phone">
-                        <img src="app_screenshot.jpg" alt="Real-Time Chat">
-                    </div>
-                </div>
-
-                <!-- Screenshot 3 -->
-                <div class="screenshot-item fade-in-up delay-200">
-                    <div class="screenshot-phone">
-                        <img src="app_screenshot.jpg" alt="Secure Payments">
-                    </div>
-                    <div class="screenshot-info">
-                        <h3>Secure Payments</h3>
-                        <p>Pay safely with our integrated payment system. Track transactions and manage your budget</p>
-                    </div>
-                </div>
-
-                <!-- Screenshot 4 -->
-                <div class="screenshot-item fade-in-up">
-                    <div class="screenshot-info">
-                        <h3>Track Progress</h3>
-                        <p>Monitor your service requests, appointments, and job completion in real-time</p>
-                    </div>
-                    <div class="screenshot-phone">
-                        <img src="app_screenshot.jpg" alt="Track Progress">
-                    </div>
-                </div>
-
-                <!-- Screenshot 5 - Escrow System -->
-                <div class="screenshot-item fade-in-up delay-100">
-                    <div class="screenshot-phone">
-                        <img src="app_screenshot.jpg" alt="Escrow System">
-                    </div>
-                    <div class="screenshot-info">
-                        <h3>Secure Escrow System</h3>
-                        <p>Your money is protected. Funds are held securely and only released when the job is completed
-                            to your satisfaction</p>
-                    </div>
-                </div>
-
-                <!-- Screenshot 6 - Offers -->
-                <div class="screenshot-item fade-in-up delay-200">
-                    <div class="screenshot-info">
-                        <h3>Make & Receive Offers</h3>
-                        <p>Clients can send offers directly to handymen. Negotiate terms and pricing before starting the
-                            job</p>
-                    </div>
-                    <div class="screenshot-phone">
-                        <img src="app_screenshot.jpg" alt="Offers System">
-                    </div>
-                </div>
-
-                <!-- Screenshot 7 - Push Notifications -->
-                <div class="screenshot-item fade-in-up">
-                    <div class="screenshot-phone">
-                        <img src="app_screenshot.jpg" alt="Push Notifications">
-                    </div>
-                    <div class="screenshot-info">
-                        <h3>Stay Updated</h3>
-                        <p>Never miss an opportunity. Get instant notifications for new jobs, messages, offers, and
-                            payment updates</p>
-                    </div>
+                <!-- Slide Indicators -->
+                <div class="slide-indicators">
+                    <button class="indicator active" data-slide="0"></button>
+                    <button class="indicator" data-slide="1"></button>
+                    <button class="indicator" data-slide="2"></button>
+                    <button class="indicator" data-slide="3"></button>
+                    <button class="indicator" data-slide="4"></button>
+                    <button class="indicator" data-slide="5"></button>
+                    <button class="indicator" data-slide="6"></button>
                 </div>
             </div>
         </div>
@@ -234,9 +278,14 @@
                     <a href="#">Support</a>
                 </div>
                 <div class="social-links">
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.facebook.com/share/19Y6PvtrEk/" target="_blank" rel="noopener noreferrer"><i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a href="https://x.com/usemaganyu?t=QHRFFUhd_cgCUQPirYkreQ&s=09" target="_blank"
+                        rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/usemaganyu?igsh=MXgxczRrbWU5NTI5aQ==" target="_blank"
+                        rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/use-maganyu/" target="_blank" rel="noopener noreferrer"><i
+                            class="fa-brands fa-linkedin"></i></a>
                 </div>
             </div>
         </div>
