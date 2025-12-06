@@ -54,19 +54,19 @@ h3 {
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     margin-bottom: 1.5rem;
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     margin-bottom: 1rem;
 }
 
 p {
     color: var(--text-muted);
     margin-bottom: 1.5rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .gradient-text {
@@ -151,6 +151,10 @@ p {
 
 .nav-links a:hover {
     color: var(--primary-color);
+}
+
+.nav-links .btn-primary {
+    color: white;
 }
 
 .mobile-toggle {
@@ -245,7 +249,7 @@ p {
 .hero-container {
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
-    gap: 5rem;
+    gap: 3rem;
     align-items: center;
 }
 
@@ -373,8 +377,11 @@ p {
 }
 
 .feature-card {
-    padding: 3rem;
+    padding: 2rem;
     transition: var(--transition);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .feature-card:hover {
@@ -403,7 +410,7 @@ p {
 }
 
 .feature-card h3 {
-    font-size: 1.4rem;
+    font-size: 1.25rem;
     margin-bottom: 1rem;
     color: #0f172a;
 }
@@ -502,7 +509,7 @@ p {
 
 .cta-card {
     text-align: center;
-    padding: 5rem 2rem;
+    padding: 3rem 2rem;
     background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
     border: 1px solid #e2e8f0;
     border-radius: 32px;
@@ -948,7 +955,7 @@ p {
 
     /* Slideshow Mobile */
     .slideshow-container {
-        padding: 0 3rem;
+        padding: 0 1rem;
     }
 
     .screenshot-slide {
@@ -957,8 +964,15 @@ p {
         text-align: center;
     }
 
-    .screenshot-phone img {
+    .phone-mockup.slideshow-variant {
+        width: 100%;
         max-width: 280px;
+        height: auto;
+        aspect-ratio: 280 / 580;
+    }
+
+    .screenshot-phone img {
+        max-width: 100%;
     }
 
     .screenshot-info h3 {
@@ -1001,6 +1015,11 @@ p {
 
 body.menu-open {
     overflow: hidden;
+}
+
+/* Hide mobile menu by default on desktop */
+.mobile-menu-container {
+    display: none;
 }
 
 @media (max-width: 768px) {
