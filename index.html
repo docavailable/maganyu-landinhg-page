@@ -44,7 +44,7 @@
     <header class="hero">
         <div class="container hero-container">
             <div class="hero-content fade-in-up">
-                <span class="badge">v1.2.0 Now Available · 10K+ Downloads · ★4.9 Rating</span>
+                <span class="badge">v1.2.0 Now Available</span>
                 <h1>Get Anything Done. Earn from Your Skills. <span class="gradient-text">All in One Powerful
                         App.</span></h1>
                 <div class="cta-group">
@@ -52,7 +52,20 @@
                         <i class="fa-solid fa-download"></i> Download App
                     </a>
                 </div>
-                <!-- Stats moved to badge -->
+
+                <div class="hero-stats">
+                    <div class="stat-separator"></div>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <strong>10K+</strong>
+                            <span>Downloads</span>
+                        </div>
+                        <div class="stat-item">
+                            <strong>4.9</strong>
+                            <span>Rating</span>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="hero-visual fade-in-up delay-200">
                 <img src="landing.png" alt="App Screenshot" class="hero-landing-image">
@@ -105,15 +118,104 @@
             </div>
 
             <!-- Trust Section -->
-            <div class="trust-section glass fade-in-up delay-200"
-                style="margin-top: 3rem; text-align: center; padding: 2rem;">
-                <h3>A Marketplace Built on Trust</h3>
-                <p>Every job, every offer, every payment happens inside the app—transparent, safe, and designed to
-                    protect both clients and service providers.</p>
-                <p><strong>No scams. No miscommunication. No confusion. Just clean, simple, reliable service.</strong>
-                </p>
+            <div class="trust-section-new fade-in-up delay-200">
+                <div class="trust-grid">
+                    <div class="trust-item">
+                        <div class="trust-icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <div class="trust-text">
+                            <h4>Secure Escrow</h4>
+                            <p>Funds held safely until job is done</p>
+                        </div>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">
+                            <i class="fa-solid fa-user-check"></i>
+                        </div>
+                        <div class="trust-text">
+                            <h4>Verified Pros</h4>
+                            <p>Identity-checked service providers</p>
+                        </div>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">
+                            <i class="fa-solid fa-tag"></i>
+                        </div>
+                        <div class="trust-text">
+                            <h4>No Hidden Fees</h4>
+                            <p>Transparent pricing every time</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        </div>
+    </section>
+
+    <!-- Interactive Features Section -->
+    <section id="interactive-features" class="interactive-features">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>Explore <span class="gradient-text">Interactive Features</span></h2>
+                <p>Beyond the core features, experience a plethora of stunning functionalities</p>
+            </div>
+
+            <div class="features-grid-custom">
+                <!-- Feature 1 -->
+                <div class="feature-box fade-in-up">
+                    <div class="feature-icon-circle" style="background: rgba(37, 99, 235, 0.1); color: #2563eb;">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <h3>One to One Chat</h3>
+                    <p>Real-time communication</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-box fade-in-up delay-100">
+                    <div class="feature-icon-circle" style="background: rgba(16, 185, 129, 0.1); color: #10b981;">
+                        <i class="fa-solid fa-clipboard-list"></i>
+                    </div>
+                    <h3>Post a Task</h3>
+                    <p>Easy job posting</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-box fade-in-up delay-200">
+                    <div class="feature-icon-circle" style="background: rgba(245, 158, 11, 0.1); color: #f59e0b;">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3>Secure Payments</h3>
+                    <p>Escrow protection</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-box fade-in-up">
+                    <div class="feature-icon-circle" style="background: rgba(239, 68, 68, 0.1); color: #ef4444;">
+                        <i class="fa-solid fa-bell"></i>
+                    </div>
+                    <h3>Real-time Notifications</h3>
+                    <p>Stay updated instantly</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="feature-box fade-in-up delay-100">
+                    <div class="feature-icon-circle" style="background: rgba(139, 92, 246, 0.1); color: #8b5cf6;">
+                        <i class="fa-solid fa-user-check"></i>
+                    </div>
+                    <h3>Identity Verification</h3>
+                    <p>Trusted community</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="feature-box fade-in-up delay-200">
+                    <div class="feature-icon-circle" style="background: rgba(6, 182, 212, 0.1); color: #06b6d4;">
+                        <i class="fa-solid fa-gauge-high"></i>
+                    </div>
+                    <h3>User Dashboard</h3>
+                    <p>Manage everything</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -261,26 +363,27 @@
     <!-- CTA Section -->
     <section id="download" class="cta-section">
         <div class="container">
-            <div class="cta-card glass fade-in-up">
-                <h2>Ready to Take Action?</h2>
-                <p>If you need help, Maganyu brings the right person to your phone.<br>
-                    If you want to earn, Maganyu brings the right jobs to your phone.</p>
-                <p style="margin-bottom: 2rem;"><strong>This is not just an app. It’s a new way of living, working, and
-                        getting things done.</strong></p>
+            <div class="cta-card-premium fade-in-up">
+                <div class="cta-content-wrapper">
+                    <div class="cta-text-content">
+                        <h2>Ready to Take Action?</h2>
+                        <p class="cta-subtitle">Join thousands transforming their daily life and income with Maganyu.
+                        </p>
 
-                <h3>Download Maganyu Now</h3>
-                <p>Join thousands transforming their daily life and income.</p>
+                        <div class="cta-features-list">
+                            <span><i class="fa-solid fa-check-circle"></i> Instant Access</span>
+                            <span><i class="fa-solid fa-check-circle"></i> Secure Platform</span>
+                            <span><i class="fa-solid fa-check-circle"></i> 24/7 Support</span>
+                        </div>
 
-                <a href="#" class="btn btn-primary btn-lg" data-modal="download">Tap to Download · It Only Takes 30
-                    Seconds</a>
-
-                <div class="cta-footer" style="margin-top: 2rem; text-align: left;">
-                    <p>🚀 <strong>You’re 30 Seconds Away From Getting Things Done</strong></p>
-                    <p>Whether you need a plumber today, a painter tomorrow, or a builder next month, Maganyu puts the
-                        right hands in your hands.</p>
-                    <p>Whether you’re a handyman trying to grow your income, Maganyu brings clients straight to your
-                        phone—daily.</p>
-                    <p><strong>Stop searching. Start getting results.</strong></p>
+                        <a href="#" class="btn btn-white btn-lg" data-modal="download">
+                            Download Maganyu Now <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <p class="cta-note">Available on Android · iOS Coming Soon</p>
+                    </div>
+                    <div class="cta-visual-content">
+                        <img src="Magga Transp.png" alt="Maganyu App" class="cta-floating-img">
+                    </div>
                 </div>
             </div>
         </div>

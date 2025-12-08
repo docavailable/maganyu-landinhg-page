@@ -270,23 +270,42 @@ p {
     margin-bottom: 3rem;
 }
 
-.stats {
+/* Hero Stats */
+.hero-stats {
+    margin-top: 2rem;
+    width: fit-content;
+}
+
+.stat-separator {
+    width: 100%;
+    height: 1px;
+    background-color: #e2e8f0;
+    margin-bottom: 2rem;
+}
+
+.stats-grid {
     display: flex;
-    gap: 4rem;
-    border-top: 1px solid #e2e8f0;
-    padding-top: 2rem;
+    gap: 3.5rem;
+    justify-content: center;
+}
+
+.stat-item {
+    text-align: center;
 }
 
 .stat-item strong {
     display: block;
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     color: #0f172a;
-    font-weight: 700;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 0.5rem;
 }
 
 .stat-item span {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: var(--text-muted);
+    font-weight: 500;
 }
 
 /* Hero Visual */
@@ -413,6 +432,116 @@ p {
     font-size: 1.25rem;
     margin-bottom: 1rem;
     color: #0f172a;
+}
+
+/* Interactive Features Section */
+.interactive-features {
+    padding: 8rem 0;
+    background: #ffffff;
+}
+
+.features-grid-custom {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-box {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: var(--transition);
+    height: 100%;
+}
+
+.feature-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.05);
+    border-color: rgba(37, 99, 235, 0.2);
+}
+
+.feature-icon-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    transition: var(--transition);
+}
+
+.feature-box:hover .feature-icon-circle {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.feature-box h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #0f172a;
+}
+
+.feature-box p {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* Trust Section New */
+.trust-section-new {
+    margin-top: 4rem;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 24px;
+    border: 1px solid #e2e8f0;
+}
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.trust-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    text-align: left;
+}
+
+.trust-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(37, 99, 235, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+.trust-text h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.25rem;
+}
+
+.trust-text p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin: 0;
+    line-height: 1.5;
 }
 
 /* Standard Section */
@@ -715,18 +844,117 @@ p {
 }
 
 /* CTA Section */
+/* CTA Section Premium */
 .cta-section {
     padding: 8rem 0;
 }
 
-.cta-card {
-    text-align: center;
-    padding: 5rem 2rem;
-    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
-    border: 1px solid #e2e8f0;
+.cta-card-premium {
+    background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
     border-radius: 32px;
-    max-width: 900px;
-    margin: 0 auto;
+    padding: 4rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(37, 99, 235, 0.3);
+    color: white;
+}
+
+.cta-card-premium::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    transform: translate(20%, -20%);
+    pointer-events: none;
+}
+
+.cta-content-wrapper {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-text-content {
+    text-align: left;
+}
+
+.cta-text-content h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.cta-subtitle {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+    max-width: 500px;
+}
+
+.cta-features-list {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.cta-features-list span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: white;
+}
+
+.cta-features-list i {
+    color: #60a5fa;
+}
+
+.btn-white {
+    background: white;
+    color: var(--primary-color);
+    padding: 1rem 2.5rem;
+    font-weight: 700;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: var(--transition);
+    text-decoration: none;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-white:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    background: #f8fafc;
+}
+
+.cta-note {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.cta-visual-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta-floating-img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.2));
+    animation: float 6s ease-in-out infinite;
 }
 
 /* Footer */
@@ -887,7 +1115,7 @@ p {
         justify-content: center;
     }
 
-    .stats {
+    .stats-grid {
         justify-content: center;
         gap: 2rem;
     }
@@ -941,6 +1169,11 @@ p {
         gap: 1.5rem;
     }
 
+    .features-grid-custom {
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
     .feature-card {
         padding: 2rem;
     }
@@ -991,6 +1224,53 @@ p {
 
     .slide-indicators {
         margin-top: 2rem;
+    }
+
+    /* Trust Section Mobile */
+    .trust-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .trust-item {
+        background: #f8fafc;
+        padding: 1.5rem;
+        border-radius: 16px;
+    }
+
+    /* CTA Section Mobile */
+    .cta-card-premium {
+        padding: 3rem 1.5rem;
+        text-align: center;
+    }
+
+    .cta-content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .cta-text-content {
+        text-align: center;
+    }
+
+    .cta-subtitle {
+        margin: 0 auto 2rem;
+    }
+
+    .cta-features-list {
+        justify-content: center;
+    }
+
+    .cta-visual-content {
+        order: -1;
+        /* Show image first on mobile? Or keep bottom? Let's keep bottom for flow, or top for visual. Let's keep default order for now, but maybe adjust if needed. Actually, image on top might be nice. Let's try image on top. */
+        order: -1;
+        margin-bottom: 1rem;
+    }
+
+    .cta-floating-img {
+        max-width: 280px;
     }
 }
 
